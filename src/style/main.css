@@ -5,44 +5,12 @@
   #f03847
 */
 
-
+/* General Styles */
 .divImage {
     display: flex;
     margin-right: 0;
     margin-top: 50px;
     margin-bottom: 100px;
-}
-
-h3 {
-    color: #f03847;
-    font-size: 1.6em;
-    padding: 20px 0;
-}
-
-h1 {
-    font-family: "Bevan", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 3em;
-    line-height: 1.1;
-}
-
-h2 {
-    font-family: "Bevan", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 2.5em;
-    line-height: 1.1;
-
-}
-
-.miniClickHere {
-    font-family: "Bevan", serif;
-    font-size: 1em;
-    color: #eaf4f7;
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    font-weight: bolder;
 }
 
 hr {
@@ -59,6 +27,44 @@ hr {
     font-weight: 400;
 }
 
+/* Heading Styles */
+h1, h2, h3 {
+    font-family: "Bevan", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    color: #f03847;
+    font-size: 1.6em;
+    padding: 20px 0;
+}
+
+/* Mini Click Here Styles */
+.miniClickHere {
+    font-family: "Bevan", serif;
+    font-size: 1em;
+    color: #eaf4f7;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    font-weight: bolder;
+}
+
+/* Header Styles */
+#header {
+    display: flex;
+    padding: 10px 20px;
+}
+
 #headerTitle {
     font-size: 2em;
     color: #f03847;
@@ -66,13 +72,6 @@ hr {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: italic;
-}
-
-#header {
-    display: flex;
-    /*justify-content: space-between;*/
-    /*align-items: center;*/
-    padding: 10px 20px;
 }
 
 #headerLinks {
@@ -95,23 +94,25 @@ hr {
     color: #aa2c37;
 }
 
-#copyright {
-    font-size: 14px;
-    margin-top: 20px;
-    color: #f03847;
-    margin-left: 80px;
-}
-
+/* Footer Styles */
 #footer {
     display: flex;
     padding: 0 20px;
     margin-top: 50px;
     margin-bottom: 0;
-    height: 60px;
+    height: 70px;
     background: #eaf4f7;
     width: 100%;
 }
 
+#copyright {
+    font-size: 14px;
+    margin-top: 25px;
+    color: #f03847;
+    margin-left: 80px;
+}
+
+/* Social Media Styles */
 #socialMedia {
     display: flex;
     justify-content: space-between;
@@ -121,5 +122,17 @@ hr {
     margin-right: 50px;
     position: absolute; /*or fixed*/
     right: 0;
-    padding-top: 3px;
+    padding-top: 8px;
+}
+
+
+/* Light Mode Styles */
+@media (prefers-color-scheme: light) {
+    #headerLinks a, .miniClickHere  {
+        color: #212423;
+    }
+
+    #footer {
+        background: #212423;
+    }
 }

@@ -52,11 +52,10 @@ export function Home() {
                 <div id="support">
                     <h1>Support Us</h1>
                     <p id="donationParagraph">
-                        Stride For Success Foundation is a 501(c)(3) nonprofit organization. Your donation is tax-deductible. We are a 100% volunteer-run organization, so your donation goes directly to supporting our mission.
+                        Stride For Success Foundation is a 501(c)(3) nonprofit organization. Your donation is tax-deductible. We are a 100% volunteer-run, so your donation goes directly to supporting our mission.
                     </p>
 
-                    <a href="https://en.wikipedia.org/wiki/World_domination" target="_blank" className="miniClickHere">OUR
-                        MISSION</a></div>
+                    <a href="https://www.gofundme.com/f/bjzqz-help-me-buy-gaming-pc" target="_blank" className="miniClickHere">DONATE</a></div>
                 <img id="donation" src={donation} alt=""/>
             </div>
 
