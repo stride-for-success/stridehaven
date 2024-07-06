@@ -26,3 +26,86 @@
 #sponsors {
     text-align: center;
 }
+
+.marqueeInside {
+    display: inline-block;
+}
+
+.marqueeInside img {
+    width: 300px;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+}
+
+.marquee .marqueeInside {
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.marquee:hover .marqueeInside {
+    animation-play-state: paused;
+}
+
+#sponsorsText {
+    margin-top: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #f03847;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    margin-left: 100px;
+    margin-right: 10%;
+    text-align: right;
+}
+
+
+
+#trackStuff {
+    float: right;
+    margin-left: 10%;
+    margin-top: 30px;
+    width: 25%;
+}
+
+#aboutParagraph {
+    font-size: 1.1em;
+}
+
+#support {
+    margin-top: 50px;
+    width: 600px;
+    margin-left: 100px;
+    margin-right: 20%;
+    text-align: left;
+}
+
+
+#donation {
+    margin-right: 5%;
+    margin-top: 30px;
+    width: 25%;
+    min-width: 250px;
+}
+
+#donationParagraph {
+    font-size: 1.1em;
+}

@@ -23,9 +23,9 @@ const html =
         <div id="footer">
             <h4 id="copyright">Copyright © Stride For Success Foundation</h4>
             <div id="socialMedia">
-                <a href="https://www.facebook.com/"><img src={facebook} alt="facebook"/></a>
-                <a href="https://www.instagram.com/"><img src={instagram} alt="instagram"/></a>
-                <a href="https://www.twitter.com/"><img src={twitter} alt="twitter"/></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src={facebook} alt="facebook"/></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src={instagram} alt="instagram"/></a>
+                <a href="https://www.twitter.com/" target="_blank"><img src={twitter} alt="twitter"/></a>
             </div>
         </div>
     </>

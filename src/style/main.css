@@ -27,6 +27,15 @@ h1 {
     line-height: 1.1;
 }
 
+h2 {
+    font-family: "Bevan", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5em;
+    line-height: 1.1;
+
+}
+
 .miniClickHere {
     font-family: "Bevan", serif;
     font-size: 1em;
@@ -34,7 +43,6 @@ h1 {
     text-decoration: underline;
     text-decoration-thickness: 1px;
     font-weight: bolder;
-
 }
 
 hr {
@@ -83,6 +91,10 @@ hr {
     font-size: 17px;
 }
 
+#headerLinks a:hover {
+    color: #aa2c37;
+}
+
 #copyright {
     font-size: 14px;
     margin-top: 20px;
@@ -97,8 +109,6 @@ hr {
     margin-bottom: 0;
     height: 60px;
     background: #eaf4f7;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
