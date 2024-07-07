@@ -112,6 +112,34 @@ h3 {
     margin-left: 80px;
 }
 
+#newsletter {
+    font-size: 14px;
+    margin-top: 23px;
+    color: #f03847;
+    margin-left: 80px;
+}
+
+#newsletter input {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #f03847;
+}
+
+#newsletter button {
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #f03847;
+    background: #f03847;
+    color: #eaf4f7;
+}
+
+#newsletter button:hover {
+    background: #aa2c37;
+    cursor: pointer;
+}
+
 /* Social Media Styles */
 #socialMedia {
     display: flex;
