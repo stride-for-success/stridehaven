@@ -1,6 +1,6 @@
 import { render } from 'preact';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';import { Home } from './home.tsx';
-// import { RunningGrants } from './runningGrants.tsx';
+import { RunningGrants } from './grantsPages/grants.tsx';
 // import { Donations } from './donations.tsx';
 // import { Sponsorships } from './sponsorships.tsx';
 import { NotFound} from "./notfound";
@@ -30,8 +30,8 @@ const App = () => (
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/our-team" element={<Team />} />
+                    <Route path="/running-grants" element={<RunningGrants />} />
                     <Route path="*" element={<NotFound />} />
-
                 </Routes>
             </Router>
         </div>

@@ -1,0 +1,48 @@
+/*
+  Palette:
+  #212423
+  #eaf4f7
+  #f03847
+*/
+
+#grants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.grant {
+    width: 25%;
+    min-width: 300px;
+    height: 300px;
+    padding: 20px;
+    border-style: solid;
+    border-color: #f03847;
+
+    margin: 30px;
+    background: #eaf4f7;
+    color: #f03847;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.grant h2 {
+    margin-top: 20px;
+}
+
+.grant img {
+    max-width: 80%;
+    max-height: 200px;
+    border-radius: 15px;
+}
+
+#planeImg {
+    transform: rotate(45deg);
+}
+
+#moneyImage {
+    border-radius: 15px;
+    width: 25%;
+}
