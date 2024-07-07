@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';import {
 // import { RunningGrants } from './runningGrants.tsx';
 // import { Donations } from './donations.tsx';
 // import { Sponsorships } from './sponsorships.tsx';
+import { NotFound} from "./notfound";
 import { Team } from './team.tsx';
 import './style/main.css';
 import './style/index.css'
@@ -29,6 +30,8 @@ const App = () => (
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/our-team" element={<Team />} />
+                    <Route path="*" element={<NotFound />} />
+
                 </Routes>
             </Router>
         </div>
