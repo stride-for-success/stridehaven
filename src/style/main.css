@@ -13,6 +13,27 @@
     margin-bottom: 100px;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content {
+    flex: 1;
+}
+
 hr {
     opacity: 30%;
 }
@@ -98,12 +119,12 @@ h3 {
 #footer {
     display: flex;
     padding: 0 20px;
-    margin-top: 50px;
-    margin-bottom: 0;
     height: 70px;
     background: #eaf4f7;
     width: 100%;
 }
+
+
 
 #copyright {
     font-size: 14px;
@@ -148,15 +169,14 @@ h3 {
     width: 120px;
     height: 60px;
     margin-right: 50px;
-    position: absolute; /*or fixed*/
+    position: absolute; /* or fixed */
     right: 0;
     padding-top: 8px;
 }
 
-
 /* Light Mode Styles */
 @media (prefers-color-scheme: light) {
-    #headerLinks a, .miniClickHere  {
+    #headerLinks a, .miniClickHere {
         color: #212423;
     }
 

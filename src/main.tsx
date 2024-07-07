@@ -1,11 +1,12 @@
 import { render } from 'preact';
-import { Router, RouteComponentProps, Link } from "@reach/router";
+import { Router, RouteComponentProps } from "@reach/router";
 import { Home } from './home.tsx';
 // import { RunningGrants } from './runningGrants.tsx';
 // import { Donations } from './donations.tsx';
 // import { Sponsorships } from './sponsorships.tsx';
 import { Team } from './team.tsx';
 import './style/main.css';
+import './style/index.css'
 import facebook from './assets/facebook.svg';
 import instagram from './assets/insta.svg';
 import twitter from './assets/twitter.svg';
@@ -17,19 +18,19 @@ const App = () => (
         <div id="header">
             <h1 id="headerTitle">strideforsuccess</h1>
             <nav id="headerLinks">
-                <Link to="/stridehaven/">HOME</Link>
-                <Link to="/stridehaven/running-grants">RUNNING GRANTS</Link>
-                <Link to="/stridehaven/donations">DONATIONS</Link>
-                <Link to="/stridehaven/sponsorships">SPONSORSHIPS</Link>
-                <Link to="/stridehaven/our-team">OUR TEAM</Link>
+                <a href="/stridehaven/">HOME</a>
+                <a href="/stridehaven/running-grants">RUNNING GRANTS</a>
+                <a href="/stridehaven/donations">DONATIONS</a>
+                <a href="/stridehaven/sponsorships">SPONSORSHIPS</a>
+                <a href="/stridehaven/our-team">OUR TEAM</a>
             </nav>
         </div>
-
-        <Router basepath="/stridehaven">
-            <RouterPage path="/" pageComponent={<Home />} />
-            <RouterPage path="/our-team" pageComponent={<Team />} />
-        </Router>
-
+        <div className="content">
+            <Router basepath="/stridehaven">
+                <RouterPage path="/" pageComponent={<Home />} />
+                <RouterPage path="/our-team" pageComponent={<Team />} />
+            </Router>
+        </div>
         <div id="footer">
             <h4 id="copyright">Copyright © Stride For Success Foundation</h4>
             <div id="newsletter">
@@ -51,10 +52,46 @@ const RouterPage = (
 
 render(<App />, document.getElementById('app')!);
 
+//onload
+window.addEventListener('load', () => {
+    console.log('overflow')
+
+    if (checkOverflow()) {
+        const footer = document.getElementById('footer') as HTMLElement;
+        footer.style.position = 'absolute';
+        footer.style.bottom = '0';
+    }
+});
+
+window.addEventListener('hashchange', () => {
+    console.log('overflow')
+
+    if (checkOverflow()) {
+        const footer = document.getElementById('footer') as HTMLElement;
+        footer.style.position = 'absolute';
+        footer.style.bottom = '0';
+    }
+});
+
+
+
+
 async function subscribeToNewsletter() {
     const email = (document.getElementById('newsletterEmail') as HTMLInputElement).value;
     console.log(`Subscribed ${email} to newsletter`);
     (document.getElementById('newsletterEmail') as HTMLInputElement).value = 'Subscribed!';
     await new Promise(resolve => setTimeout(resolve, 1000));
     (document.getElementById('newsletterEmail') as HTMLInputElement).value = '';
+}
+
+
+function checkOverflow()
+{
+    const el = document.getElementsByTagName('html')[0];
+
+    const elHeight = el.scrollHeight;
+    const viewportHeight = window.innerHeight;
+    console.log(elHeight, viewportHeight)
+
+    return elHeight <= viewportHeight;
 }

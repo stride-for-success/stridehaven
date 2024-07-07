@@ -1,5 +1,4 @@
 import './style/home.css'
-import './style/index.css'
 import moneyLogo from './assets/money.svg'
 import random from './assets/random.svg'
 import trackStuff from './assets/trackStuff.svg'

@@ -1,0 +1,26 @@
+/*
+  Palette:
+  #212423
+  #eaf4f7
+  #f03847
+*/
+
+/* General Styles */
+#topPageInfo {
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+#subtitle {
+    width: 500px;
+}
+
+#people {
+    padding-top: 0;
+    width: 30%;
+    max-width: 400px;
+}
+
+
