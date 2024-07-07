@@ -1,6 +1,5 @@
 import { render } from 'preact';
-import { Router, RouteComponentProps } from "@reach/router";
-import { Home } from './home.tsx';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';import { Home } from './home.tsx';
 // import { RunningGrants } from './runningGrants.tsx';
 // import { Donations } from './donations.tsx';
 // import { Sponsorships } from './sponsorships.tsx';
@@ -26,9 +25,11 @@ const App = () => (
             </nav>
         </div>
         <div className="content">
-            <Router basepath="/stridehaven">
-                <RouterPage path="/" pageComponent={<Home />} />
-                <RouterPage path="/our-team" pageComponent={<Team />} />
+            <Router basename="/stridehaven">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/our-team" element={<Team />} />
+                </Routes>
             </Router>
         </div>
         <div id="footer">
@@ -46,9 +47,6 @@ const App = () => (
     </>
 );
 
-const RouterPage = (
-    props: { pageComponent: JSX.Element } & RouteComponentProps
-) => props.pageComponent;
 
 render(<App />, document.getElementById('app')!);
 
