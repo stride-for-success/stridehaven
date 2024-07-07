@@ -17,15 +17,15 @@ const App = () => (
         <div id="header">
             <h1 id="headerTitle">strideforsuccess</h1>
             <nav id="headerLinks">
-                <a href="/stridehaven/">HOME</a>
-                <a href="/stridehaven/running-grants">RUNNING GRANTS</a>
-                <a href="/stridehaven/donations">DONATIONS</a>
-                <a href="/stridehaven/sponsorships">SPONSORSHIPS</a>
-                <a href="/stridehaven/our-team">OUR TEAM</a>
+                <a href="/">HOME</a>
+                <a href="/running-grants">RUNNING GRANTS</a>
+                <a href="/donations">DONATIONS</a>
+                <a href="/sponsorships">SPONSORSHIPS</a>
+                <a href="/our-team">OUR TEAM</a>
             </nav>
         </div>
         <div className="content">
-            <Router basename="/stridehaven">
+            <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/our-team" element={<Team />} />
