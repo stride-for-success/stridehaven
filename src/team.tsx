@@ -8,10 +8,49 @@ export function Team() {
             <div className="divImage">
                 <div id="topPageInfo">
                     <h1>OUR TEAM</h1>
-                    <h3 id="subtitle" className="fancy"><i><u><b>100%</b></u></i> Volunteers, High School Students and Runners</h3>
+                    <h3 id="subtitle" className="fancy"><i><u><b>100%</b></u></i> Volunteers, High School Students and
+                        Runners</h3>
                 </div>
                 <img id="people" src={people} alt=""/>
             </div>
+            <br/>
+            <br/>
+            <div id="team">
+                <div className="person">
+                    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="Jane Doe"/>
+                    <h2>Jane Doe</h2>
+                    <p className="title">CEO & Founder</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>
+                        <a href="mailto:sadfsadgf@gmail.com" target="_blank">
+                            <button>Contact</button>
+                        </a>
+                    </p>
+                </div>
+                <div className="person">
+                    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="Jane Doe"/>
+                    <h2>Jane Doe</h2>
+                    <p className="title">CEO & Founder</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>
+                        <a href="mailto:sadfsadgf@gmail.com" target="_blank">
+                            <button>Contact</button>
+                        </a>
+                    </p>
+                </div>
+                <div className="person">
+                    <img src="https://www.w3schools.com/w3images/team2.jpg" alt="Jane Doe"/>
+                    <h2>Jane Doe</h2>
+                    <p className="title">CEO & Founder</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>
+                        <a href="mailto:sadfsadgf@gmail.com" target="_blank">
+                            <button>Contact</button>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <br/>
 
 
         </>

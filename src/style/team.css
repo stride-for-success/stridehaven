@@ -23,4 +23,27 @@
     max-width: 400px;
 }
 
+.person {
+    width: 400px;
+    border-style: solid;
+    border-color: #f03847;
 
+    margin: 10px;
+    padding: 10px;
+    background: #eaf4f7;
+    color: #f03847;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.person img {
+    width: 350px;
+    border-radius: 15px;
+}
