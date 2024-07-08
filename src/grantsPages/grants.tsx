@@ -10,6 +10,7 @@ export function RunningGrants() {
         <>
             <div className="divImage">
                 <div id="topPageInfo">
+                    <h3 className="fancy italic">Here are our</h3>
                     <h1>GRANTS</h1>
                     <h3 id="subtitle" className="fancy">The support you need for your running journey.</h3>
                 </div>
@@ -26,7 +27,7 @@ export function RunningGrants() {
                     <img id="planeImg" src={plane} alt="Travel"/>
                 </div>
                 <div className="grant">
-                    <h2>Entry</h2>
+                    <h2>Entry Fees</h2>
                     <img src={entry} alt="Entry"/>
                 </div>
                 <div className="grant">

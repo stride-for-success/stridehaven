@@ -10,6 +10,7 @@ import './style/index.css'
 import facebook from './assets/facebook.svg';
 import instagram from './assets/insta.svg';
 import twitter from './assets/twitter.svg';
+import {Sponsors} from "./sponsors";
 
 
 
@@ -31,6 +32,7 @@ const App = () => (
                     <Route path="/" element={<Home />} />
                     <Route path="/our-team" element={<Team />} />
                     <Route path="/running-grants" element={<RunningGrants />} />
+                     <Route path="/sponsorships" element={<Sponsors />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>

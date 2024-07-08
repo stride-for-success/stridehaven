@@ -174,13 +174,3 @@ h3 {
     padding-top: 8px;
 }
 
-/* Light Mode Styles */
-@media (prefers-color-scheme: light) {
-    #headerLinks a, .miniClickHere {
-        color: #212423;
-    }
-
-    #footer {
-        background: #212423;
-    }
-}
