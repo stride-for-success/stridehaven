@@ -28,6 +28,11 @@
     border-radius: 10px;
 }
 
+.grant:hover {
+    background: #dfe9ec;
+    cursor: pointer;
+}
+
 .grant h2 {
     margin-top: 20px;
 }
@@ -42,7 +47,7 @@
     transform: rotate(45deg);
 }
 
-#moneyImage {
+#receiveImage {
     border-radius: 15px;
     width: 25%;
 }

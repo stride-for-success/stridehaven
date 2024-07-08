@@ -2,15 +2,15 @@ import { render } from 'preact';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';import { Home } from './home.tsx';
 import { RunningGrants } from './grantsPages/grants.tsx';
 // import { Donations } from './donations.tsx';
-// import { Sponsorships } from './sponsorships.tsx';
+import { Sponsors } from "./sponsors";
+import { Contact } from "./contact";
 import { NotFound} from "./notfound";
 import { Team } from './team.tsx';
 import './style/main.css';
 import './style/index.css'
-import facebook from './assets/facebook.svg';
-import instagram from './assets/insta.svg';
-import twitter from './assets/twitter.svg';
-import {Sponsors} from "./sponsors";
+import facebook from './assets/logos/facebook.svg';
+import instagram from './assets/logos/insta.svg';
+import twitter from './assets/logos/twitter.svg';
 
 
 
@@ -24,6 +24,7 @@ const App = () => (
                 <a href="/donations">DONATIONS</a>
                 <a href="/sponsorships">SPONSORSHIPS</a>
                 <a href="/our-team">OUR TEAM</a>
+                <a href="/contact">CONTACT</a>
             </nav>
         </div>
         <div className="content">
@@ -33,6 +34,7 @@ const App = () => (
                     <Route path="/our-team" element={<Team />} />
                     <Route path="/running-grants" element={<RunningGrants />} />
                      <Route path="/sponsorships" element={<Sponsors />} />
+                    <Route path="/contact" element={<Contact />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>

@@ -14,7 +14,7 @@ export function RunningGrants() {
                     <h1>GRANTS</h1>
                     <h3 id="subtitle" className="fancy">The support you need for your running journey.</h3>
                 </div>
-                <img id="moneyImage" src={receive} alt=""/>
+                <img id="receiveImage" src={receive} alt=""/>
             </div>
             <br/>
             <br/>

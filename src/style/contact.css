@@ -1,0 +1,25 @@
+/*
+  Palette:
+  #212423
+  #eaf4f7
+  #f03847
+*/
+
+#contact {
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+#airplane {
+    padding-top: 0;
+    width: 70%;
+    max-width: 420px;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+#form {
+    margin-top: 50px;
+}
