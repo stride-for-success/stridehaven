@@ -27,6 +27,8 @@ export function Sponsors() {
             <hr/>
             <div id="sponsors">
                 <h2 id="sponsorsText">Sponsors</h2>
+                <h3 className="fancy italic"> We have no sponsors as of now. Maybe you could be
+                    our first?</h3>
                 <div className="marquee">
                     {marqueeElements}
                 </div>
@@ -38,7 +40,7 @@ export function Sponsors() {
                 <div id="about">
                     <h1>How</h1>
                     <h3 className="fancy italic">Partner with us</h3>
-                    <p id="aboutParagraph">You can support us by donating at least $500, providing discounted or free goods and services, or contributing in other ways. All our partners will be featured on our website and any future merchandise. If you're interested, please send us an email.</p>
+                    <p id="aboutParagraph">You can support us by donating at least $500, providing discounted or free goods and services, or contributing in other ways. All our partners will be featured on our website and any future merchandise. If you're interested, <a href="/contact">please send us an email.</a></p>
                 </div>
             </div>
             <hr/>

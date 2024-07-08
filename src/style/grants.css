@@ -30,6 +30,7 @@
 
 .grant:hover {
     background: #dfe9ec;
+    color: #f03847;
     cursor: pointer;
 }
 
@@ -50,4 +51,11 @@
 #receiveImage {
     border-radius: 15px;
     width: 25%;
+}
+
+#travelPagePlane {
+    border-radius: 15px;
+    width: 30%;
+    transform: rotate(45deg);
+
 }

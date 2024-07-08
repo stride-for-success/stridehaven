@@ -1,6 +1,6 @@
 import { render } from 'preact';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';import { Home } from './home.tsx';
-import { RunningGrants } from './grantsPages/grants.tsx';
+import { RunningGrants, TravelGrant } from './grants.tsx';
 // import { Donations } from './donations.tsx';
 import { Sponsors } from "./sponsors";
 import { Contact } from "./contact";
@@ -33,8 +33,9 @@ const App = () => (
                     <Route path="/" element={<Home />} />
                     <Route path="/our-team" element={<Team />} />
                     <Route path="/running-grants" element={<RunningGrants />} />
-                     <Route path="/sponsorships" element={<Sponsors />} />
+                    <Route path="/sponsorships" element={<Sponsors />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/grants/travel" element={<TravelGrant />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>
@@ -68,15 +69,9 @@ window.addEventListener('load', () => {
     }
 });
 
-window.addEventListener('hashchange', () => {
-    console.log('overflow')
-
-    if (checkOverflow()) {
-        const footer = document.getElementById('footer') as HTMLElement;
-        footer.style.position = 'absolute';
-        footer.style.bottom = '0';
-    }
-});
+window.addEventListener('hashchange', fixFooter);
+window.addEventListener('load', fixFooter);
+window.addEventListener('resize', fixFooter);
 
 
 
@@ -89,6 +84,15 @@ async function subscribeToNewsletter() {
     (document.getElementById('newsletterEmail') as HTMLInputElement).value = '';
 }
 
+function fixFooter() {
+    console.log('overflow')
+
+    if (checkOverflow()) {
+        const footer = document.getElementById('footer') as HTMLElement;
+        footer.style.position = 'absolute';
+        footer.style.bottom = '0';
+    }
+}
 
 function checkOverflow()
 {

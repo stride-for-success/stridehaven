@@ -29,6 +29,7 @@ export function Home() {
             <hr/>
             <div id="sponsors">
                 <h2 id="sponsorsText">Sponsors</h2>
+                <h3 className="fancy italic"> We have no sponsors as of now. <a href="/sponsorships">Maybe you could be our first?</a></h3>
                 <div className="marquee">
                     {marqueeElements}
                 </div>
