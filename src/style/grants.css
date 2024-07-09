@@ -49,13 +49,15 @@
 }
 
 #receiveImage {
-    border-radius: 15px;
     width: 25%;
 }
 
 #travelPagePlane {
-    border-radius: 15px;
     width: 30%;
     transform: rotate(45deg);
+}
 
+#travelPageEntry, #travelPageGear {
+    width: 30%;
+    transform: rotate(5deg);
 }
