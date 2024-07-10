@@ -44,22 +44,41 @@ const App = () => (
             </Router>
         </div>
         <div id="footer">
-            <h4 id="copyright">Copyright © Stride For Success Foundation</h4>
-            <div id="newsletter">
-                <input type="email" id="newsletterEmail" placeholder="Email" />
-                <button id="subscribe" onClick={subscribeToNewsletter}>Subscribe</button>
+            <div id="footerTop">
+                <h4 id="copyright">Copyright © Stride For Success Foundation</h4>
+                <div id="newsletter">
+                    <input type="email" id="newsletterEmail" placeholder="Email"/>
+                    <button id="subscribe" onClick={subscribeToNewsletter}>Subscribe</button>
+                </div>
+                <div id="socialMedia">
+                    <a href="https://www.facebook.com/" target="_blank"><img src={facebook} alt="facebook"/></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src={instagram} alt="instagram"/></a>
+                    <a href="https://www.twitter.com/" target="_blank"><img src={twitter} alt="twitter"/></a>
+                </div>
             </div>
-            <div id="socialMedia">
-                <a href="https://www.facebook.com/" target="_blank"><img src={facebook} alt="facebook" /></a>
-                <a href="https://www.instagram.com/" target="_blank"><img src={instagram} alt="instagram" /></a>
-                <a href="https://www.twitter.com/" target="_blank"><img src={twitter} alt="twitter" /></a>
+            <div id="footerBottom">
+                <div id="infoLinks">
+                    <a href="/privacy">Privacy Policy</a><br/>
+                    <a href="/terms.html">Terms of Service</a><br/>
+                    <a href="/contact">Contact Us</a>
+                </div>
+                <div id="moreLinks">
+                    <a href="/about">About Us</a><br/>
+                    <a href="/faq">FAQ</a><br/>
+                    <a href="/blog">Blog</a>
+                </div>
+                <div id="evenMoreLinks">
+                    <a href="/transparency">Our Transparency</a><br/>
+                    <a href="/our-mission">Our Mission</a><br/>
+                    <a href="/sponsor">Sponsor</a>
+                </div>
             </div>
         </div>
     </>
 );
 
 
-render(<App />, document.getElementById('app')!);
+render(<App/>, document.getElementById('app')!);
 
 //onload
 window.addEventListener('load', () => {
@@ -75,8 +94,6 @@ window.addEventListener('load', () => {
 window.addEventListener('hashchange', fixFooter);
 window.addEventListener('load', fixFooter);
 window.addEventListener('resize', fixFooter);
-
-
 
 
 async function subscribeToNewsletter() {

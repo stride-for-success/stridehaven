@@ -116,12 +116,54 @@ h3 {
 }
 
 /* Footer Styles */
-#footer {
+#footerTop {
     display: flex;
     padding: 0 20px;
     height: 70px;
     background: #eaf4f7;
     width: 100%;
+}
+
+#footerBottom {
+    display: flex;
+    padding: 0 20px;
+    height: 70px;
+    background: #eaf4f7;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#infoLinks {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin-left: 50px;
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+#moreLinks {
+    text-align: center;
+    max-width: 900px;
+    margin-top: -10px;
+    font-size: 14px;
+}
+
+#evenMoreLinks {
+    max-width: 900px;
+    margin-top: -10px;
+    font-size: 14px;
+    margin-right: 50px;
+    text-align: right;
+}
+
+#footerBottom a {
+    color: #f03847;
+}
+
+#footerBottom a:hover {
+    color: #aa2c37;
 }
 
 
@@ -130,7 +172,7 @@ h3 {
     font-size: 14px;
     margin-top: 25px;
     color: #f03847;
-    margin-left: 80px;
+    margin-left: 50px;
 }
 
 #newsletter {
