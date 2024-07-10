@@ -1,6 +1,7 @@
 import { render } from 'preact';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';import { Home } from './home.tsx';
 import { RunningGrants, TravelGrant, EntryGrant, GearGrant, OtherGrant } from './grants.tsx';
+import { About } from './about.tsx';
 // import { Donations } from './donations.tsx';
 import { Sponsors } from "./sponsors";
 import { Contact } from "./contact";
@@ -39,6 +40,7 @@ const App = () => (
                     <Route path="/grants/entry" element={<EntryGrant />} />
                     <Route path="/grants/gear" element={<GearGrant />} />
                     <Route path="/grants/other" element={<OtherGrant />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>
@@ -58,7 +60,7 @@ const App = () => (
             </div>
             <div id="footerBottom">
                 <div id="infoLinks">
-                    <a href="/privacy">Privacy Policy</a><br/>
+                    <a href="/privacy.html">Privacy Policy</a><br/>
                     <a href="/terms.html">Terms of Service</a><br/>
                     <a href="/contact">Contact Us</a>
                 </div>
@@ -70,7 +72,7 @@ const App = () => (
                 <div id="evenMoreLinks">
                     <a href="/transparency">Our Transparency</a><br/>
                     <a href="/our-mission">Our Mission</a><br/>
-                    <a href="/sponsor">Sponsor</a>
+                    <a href="/sponsorships">Sponsor Us</a>
                 </div>
             </div>
         </div>

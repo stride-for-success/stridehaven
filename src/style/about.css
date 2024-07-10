@@ -1,0 +1,26 @@
+/*
+  Palette:
+  #212423
+  #eaf4f7
+  #f03847
+*/
+
+#about {
+    padding-top: 0;
+    width: 70%;
+    max-width: 420px;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+#ourRoots {
+    padding-top: 0;
+    width: 70%;
+    max-width: 800px;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+
+#ourRoots p {
+    font-size: 1.1em;
+}
