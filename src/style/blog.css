@@ -1,0 +1,74 @@
+/*
+  Palette:
+  #212423
+  #eaf4f7
+  #f03847
+*/
+
+#theBlogTitle {
+    font-size: 3.5em;
+    font-weight: bold;
+}
+
+#blog {
+    text-align: center;
+}
+
+#searchBar {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 50%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #f03847;
+}
+
+#searchBar:focus {
+    outline: none;
+    background: #212322;
+}
+
+#searchButton {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #f03847;
+    background: #f03847;
+    color: #eaf4f7;
+}
+
+#searchButton:hover {
+    background: #aa2c37;
+    cursor: pointer;
+}
+
+#blogPosts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blogPost {
+    width: 50%;
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 3px solid #f03847;
+    background: #eaf4f7;
+    color: black;
+}
+
+.blogPost h4 {
+    color: #f03847;
+}
+
+.blogPost:hover {
+    background: #dfe9ec;
+    cursor: pointer;
+}
+
+.linkToBlogPost {
+    width: fit-content;
+}

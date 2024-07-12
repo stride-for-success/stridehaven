@@ -2,7 +2,7 @@ import { render } from 'preact';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';import { Home } from './home.tsx';
 import { RunningGrants, TravelGrant, EntryGrant, GearGrant, OtherGrant } from './grants.tsx';
 import { About } from './about.tsx';
-// import { Donations } from './donations.tsx';
+import { Blog, BlogPost } from './blog.tsx';
 import { Sponsors } from "./sponsors";
 import { Contact } from "./contact";
 import { NotFound} from "./notfound";
@@ -80,6 +80,8 @@ const App = () => (
                     <Route path="/grants/gear" element={<GearGrant />} />
                     <Route path="/grants/other" element={<OtherGrant />} />
                     <Route path="/about" element={<About />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/*" element={<BlogPost />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>
@@ -105,12 +107,12 @@ const App = () => (
                 </div>
                 <div id="moreLinks">
                     <a href="/about">About Us</a><br/>
-                    <a href="/faq">FAQ</a><br/>
+                    <a href="/blog/faq">FAQ</a><br/>
                     <a href="/blog">Blog</a>
                 </div>
                 <div id="evenMoreLinks">
-                    <a href="/transparency">Our Transparency</a><br/>
-                    <a href="/our-mission">Our Mission</a><br/>
+                    <a href="/blog/transparency">Our Transparency</a><br/>
+                    <a href="/blog/our-mission">Our Mission</a><br/>
                     <a href="/sponsorships">Sponsor Us</a>
                 </div>
             </div>
