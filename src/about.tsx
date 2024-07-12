@@ -10,7 +10,7 @@ export function About() {
                     <h1>Us</h1>
                     <h3 className="fancy">And why our mission is to improve the world of running.</h3>
                 </div>
-                <img id="about" src={aboutSvg} alt=""/>
+                <img id="aboutImg" src={aboutSvg} alt=""/>
             </div>
             <br/>
             <br/>

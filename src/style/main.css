@@ -135,6 +135,15 @@ h3 {
     justify-content: space-between;
 }
 
+#footerPhoneBottom {
+    display: none;
+}
+
+#footerTop, #footerBottom, #footerPhoneBottom, #footer {
+    min-width: 100%;
+}
+
+
 #infoLinks {
     display: block;
     justify-content: space-between;
@@ -175,13 +184,15 @@ h3 {
     margin-top: 25px;
     color: #f03847;
     margin-left: 50px;
+    height: 30px;
+    vertical-align: center;
 }
 
 #newsletter {
     font-size: 14px;
     margin-top: 23px;
     color: #f03847;
-    margin-left: 80px;
+    margin-left: 40px;
 }
 
 #newsletter input {
@@ -297,6 +308,60 @@ h3 {
     #headerTitle {
         margin-right: 20px;
     }
+
+    #footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #footerTop {
+        display: flex;
+        padding: 0;
+        height: 70px;
+        background: #eaf4f7;
+        width: 100%;
+    }
+
+    #footerBottom {
+        display: flex;
+        height: 90px;
+        background: #eaf4f7;
+        width: 100%;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+
+    #footerBottom div {
+        margin-top: 10px;
+    }
+
+    #newsletter {
+        margin-left: 40px;
+    }
+
+
+    #footerTop #copyright {
+        display: none;
+    }
+
+    #footerPhoneBottom {
+        display: block;
+        height: 60px;
+        text-align: center;
+        background: #eaf4f7;
+    }
+
+    #footerPhoneBottom #copyright {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+
 }
 
 @media (max-width: 400px) {
@@ -311,4 +376,36 @@ h3 {
         margin-left: auto;
         margin-right: 10px;
     }
+
+    #footerBottom a {
+        font-size: 0.8em;
+    }
+
+    #copyright {
+        font-size: 0.8em;
+    }
+
+    #infoLinks {
+        margin-left: 20px;
+    }
+
+    #evenMoreLinks {
+        margin-right: 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    #newsletter {
+        display: none;
+    }
+
+    #socialMedia {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        right: auto;
+        position: relative;
+    }
+
 }

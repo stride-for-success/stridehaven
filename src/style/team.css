@@ -18,6 +18,7 @@
 
 .person {
     width: 400px;
+    max-width: 90%;
     border-style: solid;
     border-color: #f03847;
 
@@ -39,4 +40,5 @@
 .person img {
     width: 350px;
     border-radius: 15px;
+    max-width: 90%;
 }

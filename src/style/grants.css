@@ -15,7 +15,8 @@
 
 .grant {
     width: 25%;
-    min-width: 300px;
+    min-width: 250px;
+    max-width: 90%;
     height: 300px;
     padding: 20px;
     border-style: solid;

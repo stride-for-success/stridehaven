@@ -24,19 +24,6 @@
     margin-top: 10px;
 }
 
-#about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 600px;
-    margin-left: 100px;
-    margin-right: 10%;
-    text-align: right;
-}
-
-#aboutParagraph {
-    font-size: 1.1em;
-}
 
 #moneyImage {
     float: right;

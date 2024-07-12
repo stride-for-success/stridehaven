@@ -7,7 +7,7 @@
 
 /* General Styles */
 #topPageInfo {
-    width: 100%;
+    width: 90%;
     max-width: 700px;
     text-align: left;
     padding-left: 10%;
@@ -15,6 +15,7 @@
 
 #subtitle {
     width: 500px;
+    max-width: 90%;
 }
 
 #moneyImage {
@@ -25,6 +26,9 @@
 
 #sponsors {
     text-align: center;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #sponsorsText {
@@ -32,21 +36,23 @@
 }
 
 #about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     width: 600px;
-    margin-left: 100px;
+    margin-left: auto;
     margin-right: 10%;
     text-align: right;
+    float: right;
 }
+
+#about h1 {
+    margin-left: auto;
+}
+
 
 #aboutParagraph {
     font-size: 1.1em;
 }
 
 #trackStuff {
-    float: right;
     margin-left: 10%;
     margin-top: 30px;
     width: 25%;
@@ -108,12 +114,17 @@
 
 @media (max-width: 800px) {
     #support {
-        min-width: 90%;
-        margin-left: 0;
-        padding-left: 8%
+        min-width: 75%;
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #topPageInfo {
         padding-left: 8%;
+    }
+
+    #about {
+        margin-left: 10%;
     }
 }

@@ -61,6 +61,7 @@ export function TravelGrant() {
             <br/>
             <div style="width:100%;height:500px;" data-fillout-id="41uENjar4gus" data-fillout-embed-type="standard"
                  data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+            <br/>
             <script src="https://server.fillout.com/embed/v1/"></script>
         </>);
 }
@@ -84,6 +85,7 @@ export function EntryGrant() {
             <br/>
             <div style="width:100%;height:500px;" data-fillout-id="41uENjar4gus" data-fillout-embed-type="standard"
                  data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+            <br/>
             <script src="https://server.fillout.com/embed/v1/"></script>
         </>);
 }
@@ -107,6 +109,7 @@ export function GearGrant() {
             <br/>
             <div style="width:100%;height:500px;" data-fillout-id="55Pa71gBmjus" data-fillout-embed-type="standard"
                  data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+            <br/>
             <script src="https://server.fillout.com/embed/v1/"></script>
         </>);
 }
@@ -129,6 +132,7 @@ export function OtherGrant() {
             <br/>
             <div style="width:100%;height:500px;" data-fillout-id="crth9kzbxhus" data-fillout-embed-type="standard"
                  data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+            <br/>
             <script src="https://server.fillout.com/embed/v1/"></script>
         </>);
 }

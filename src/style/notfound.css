@@ -8,12 +8,46 @@
 #notFound {
     text-align:  center;
     margin-top: 100px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#notFound h1 {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #notFound img {
     width: 20%;
 }
 
-#notFound h3 {
+#notYet {
     margin-top: -60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 500px) {
+
+}
+
+@media (max-width: 530px) {
+    #notYet {
+        margin-top: -59px;
+    }
+
+    #notFound img {
+        width: 30%;
+    }
+}
+
+@media (max-width: 350px) {
+    #notYet {
+        margin-top: -52px;
+    }
+
+    #notFound img {
+        width: 40%;
+    }
 }
