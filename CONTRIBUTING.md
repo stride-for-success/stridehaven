@@ -111,7 +111,3 @@ We appreciate improvements to our documentation. Feel free to submit pull reques
 By contributing, you agree that your contributions will be licensed under the same license as the project's license.
 
 Thank you for contributing!
-
----
-
-Feel free to adjust the guidelines to better suit your specific project's needs.
