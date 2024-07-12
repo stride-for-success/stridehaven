@@ -57,4 +57,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-For more information about the Stride for Success Foundation, visit our website or contact us at [email@example.com](mailto:email@example.com).
+For more information about the Stride for Success Foundation, [visit our website](https://strideforsuccess.org/contact)
