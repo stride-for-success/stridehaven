@@ -8,3 +8,9 @@ Run with the following commands:
 npm install
 npm run dev
 ```
+
+## Todo
+- [ ] Blog
+- [ ] Phone Compat
+- [ ] Donation Page
+- 

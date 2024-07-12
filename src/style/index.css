@@ -19,6 +19,10 @@
     overflow-x: hidden;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 /* Link Styles */
 a {
     font-weight: 500;

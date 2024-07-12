@@ -8,8 +8,8 @@ export function Contact() {
                 <div id="contact">
                     <h3 className="fancy italic">How to</h3>
                     <h1>Contact Us</h1>
-                    <h3 className="fancy">For any questions, comments, concerns, <b>or partnership ideas</b> please email us at <a
-                        href="mailto:sadfasf@gmail.com">sadfasf@gmail.com</a> or fill out the form below.</h3>
+                    <h3 className="fancy">For any questions, comments, concerns, <b>or partnership ideas</b> please email us at <s><a
+                        href="mailto:abcd@gmail.com">example@example.org</a></s> or fill out the form below.</h3>
                 </div>
                 <img id="airplane" src={airplane} alt=""/>
             </div>

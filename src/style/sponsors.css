@@ -6,13 +6,6 @@
 */
 
 /* General Styles */
-#topPageInfo {
-    width: 100%;
-    max-width: 700px;
-    text-align: left;
-    margin-left: 10%;
-}
-
 #subtitle {
     width: 500px;
 }
@@ -52,13 +45,6 @@
     width: 30%;
 }
 
-#support {
-    margin-top: 50px;
-    width: 600px;
-    margin-left: 100px;
-    margin-right: 20%;
-    text-align: left;
-}
 
 #donation {
     margin-right: 5%;

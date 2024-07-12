@@ -20,8 +20,8 @@ export function Home() {
                     <h3 className="fancy italic">A nonprofit for</h3>
                     <h1>Empowering low-income runners to pursue their passion</h1>
                     <h3 id="subtitle" className="fancy">Through grants and essential support</h3>
-                    <a href="https://en.wikipedia.org/wiki/World_domination" target="_blank" className="miniClickHere">OUR
-                        MISSION</a>
+                    {/*<a href="https://en.wikipedia.org/wiki/World_domination" target="_blank" className="miniClickHere">OUR*/}
+                    {/*    MISSION</a>*/}
                 </div>
                 <img id="moneyImage" src={moneyLogo} alt=""/>
             </div>
@@ -55,7 +55,7 @@ export function Home() {
                         Stride For Success Foundation is a 501(c)(3) nonprofit organization. Your donation is tax-deductible. We are a 100% volunteer-run, so your donation goes directly to supporting our mission.
                     </p>
 
-                    <a href="https://www.gofundme.com/f/bjzqz-help-me-buy-gaming-pc" target="_blank" className="miniClickHere">DONATE</a></div>
+                    <a href="/donate" className="miniClickHere">DONATE</a></div>
                 <img id="donation" src={donation} alt=""/>
             </div>
 

@@ -10,7 +10,7 @@
     width: 100%;
     max-width: 700px;
     text-align: left;
-    margin-left: 10%;
+    padding-left: 10%;
 }
 
 #subtitle {
@@ -104,4 +104,16 @@
 /* Scrollbar Styles */
 ::-webkit-scrollbar-thumb:active {
     background-color: #f03847;
+}
+
+@media (max-width: 800px) {
+    #support {
+        min-width: 90%;
+        margin-left: 0;
+        padding-left: 8%
+    }
+
+    #topPageInfo {
+        padding-left: 8%;
+    }
 }

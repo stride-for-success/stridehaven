@@ -14,24 +14,63 @@ import instagram from './assets/logos/insta.svg';
 import twitter from './assets/logos/twitter.svg';
 
 
+let headerLinks = <nav id="headerLinks">
+    <a href="/">HOME</a>
+    <a href="/running-grants">RUNNING GRANTS</a>
+    <a href="/donations">DONATIONS</a>
+    <a href="/sponsorships">SPONSORSHIPS</a>
+    <a href="/our-team">OUR TEAM</a>
+    <a href="/contact">CONTACT</a>
+</nav>
+
+if (window.innerWidth < 880) {
+    headerLinks = <select id="headerLinks" onChange={pageSwap}>
+        <option value="">-MENU-</option>
+        <option value="/">HOME</option>
+        <option value="/running-grants">RUNNING GRANTS</option>
+        <option value="/donations">DONATIONS</option>
+        <option value="/sponsorships">SPONSORSHIPS</option>
+        <option value="/our-team">OUR TEAM</option>
+        <option value="/contact">CONTACT</option>
+    </select>
+}
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth < 880) {
+        headerLinks = <select id="headerLinks" onChange={pageSwap}>
+            <option value="/">HOME</option>
+            <option value="/running-grants">RUNNING GRANTS</option>
+            <option value="/donations">DONATIONS</option>
+            <option value="/sponsorships">SPONSORSHIPS</option>
+            <option value="/our-team">OUR TEAM</option>
+            <option value="/contact">CONTACT</option>
+        </select>
+
+    } else {
+        headerLinks = <nav id="headerLinks">
+            <a href="/">HOME</a>
+            <a href="/running-grants">RUNNING GRANTS</a>
+            <a href="/donations">DONATIONS</a>
+            <a href="/sponsorships">SPONSORSHIPS</a>
+            <a href="/our-team">OUR TEAM</a>
+            <a href="/contact">CONTACT</a>
+        </nav>
+    }
+
+    render(<App/>, document.getElementById('app')!);
+});
+
 
 const App = () => (
     <>
         <div id="header">
             <h1 id="headerTitle">strideforsuccess</h1>
-            <nav id="headerLinks">
-                <a href="/">HOME</a>
-                <a href="/running-grants">RUNNING GRANTS</a>
-                <a href="/donations">DONATIONS</a>
-                <a href="/sponsorships">SPONSORSHIPS</a>
-                <a href="/our-team">OUR TEAM</a>
-                <a href="/contact">CONTACT</a>
-            </nav>
+            {headerLinks}
         </div>
         <div className="content">
             <Router>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home/>}/>
                     <Route path="/our-team" element={<Team />} />
                     <Route path="/running-grants" element={<RunningGrants />} />
                     <Route path="/sponsorships" element={<Sponsors />} />
@@ -125,4 +164,12 @@ function checkOverflow()
     console.log(elHeight, viewportHeight)
 
     return elHeight <= viewportHeight;
+}
+
+
+function pageSwap () {
+    const page = (document.getElementById('headerLinks') as HTMLSelectElement).value;
+    if (page) {
+        window.location.href = page;
+    }
 }
