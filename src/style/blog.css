@@ -72,3 +72,20 @@
 .linkToBlogPost {
     width: fit-content;
 }
+
+#blogPost {
+    width: 75%;
+    margin-left: 50px;
+    max-width: 1000px;
+    margin-bottom: 50px;
+    margin-top: 80px;
+}
+
+#blogPostContent {
+    margin-top: 50px;
+}
+
+#blogPostContent img {
+    max-width: 100%;
+    border-radius: 10px;
+}

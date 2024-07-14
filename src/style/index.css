@@ -21,6 +21,7 @@
 
 html {
     overflow-x: hidden;
+    height: auto;
 }
 
 /* Link Styles */

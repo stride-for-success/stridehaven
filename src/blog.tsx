@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import Markdown from 'preact-markdown';
 import './style/blog.css';
 
 interface BlogDetails {
@@ -43,6 +44,10 @@ export function Blog() {
                 }
                 posts.push(blogDetails);
             }
+
+            // Sort posts by date
+            posts.sort((a, b) => new Date(b.date || '').getTime() - new Date(a.date || '').getTime());
+
             setBlogPosts(posts);
         }
 
@@ -63,12 +68,18 @@ export function Blog() {
                 <button id="searchButton">Search</button>
             </div>
             <div id="blogPosts">
-                {blogPosts.map((post, index) => (
-                    <div className="blogPost" key={index} onClick={() => handleClick(post.urlName)}>
-                        <h2>{post.title}</h2>
-                        <h4>{post.description}</h4>
-                        <p>{post.author} - {post.date ? new Date(post.date).toLocaleDateString() : 'Date not available'}</p>                    </div>
-                ))}
+                {blogPosts ? (
+                    <>{blogPosts.map((post, index) => (
+                        <div className="blogPost" key={index} onClick={() => handleClick(post.urlName)}>
+                            <h2>{post.title}</h2>
+                            <h4>{post.description}</h4>
+                            <p>{post.author} - {post.date ? new Date(post.date).toLocaleDateString() : 'Date not available'}</p>
+                        </div>
+                    ))}</>
+                ) : (
+                    <p>Loading content...</p>
+                )}
+
             </div>
         </div>
     );
@@ -76,13 +87,48 @@ export function Blog() {
 
 
 export function BlogPost() {
+    const page = window.location.pathname.split('/').pop();
+    const [blogPost, setBlogPost] = useState<BlogDetails>({});
+
+    useEffect(() => {
+        async function fetchBlogPost() {
+            const response = await fetch(`https://api.github.com/repos/stride-for-success/runfluence/contents/blog/${page}`);
+            const data = await response.json();
+            const blogDetails: BlogDetails = {};
+
+            for (const file of data) {
+                if (file.name === 'index.md') {
+                    const stuffResponse = await fetch(file.download_url);
+                    blogDetails['content'] = await stuffResponse.text();
+                } else if (file.name == 'info.json') {
+                    const infoResponse = await fetch(file.download_url);
+                    const infoData = await infoResponse.json();
+                    blogDetails['title'] = infoData.title;
+                    blogDetails['date'] = infoData['creation-date'];
+                    blogDetails['description'] = infoData.description;
+                    blogDetails['author'] = infoData.author;
+                }
+            }
+            setBlogPost(blogDetails);
+        }
+
+        fetchBlogPost();
+    }, [page]);
+
     return (
         <div id="blogPost">
-            <h2 id="blogPostTitle">Title</h2>
-            <h3 id="blogPostAuthor">Author</h3>
-            <h4 id="blogPostDate">Date</h4>
-            <p id="blogPostContent">Content</p>
+            <h1>{blogPost.title}</h1>
+            <h3>{blogPost.description}</h3>
+            <p id="authorAndDate"><b>{blogPost.author} - {blogPost.date ? new Date(blogPost.date).toLocaleDateString() : 'Date not available'}</b></p>
+            <hr/>
+            <div id="blogPostContent">
+                {blogPost.content ? (
+                    // @ts-ignore
+                    <Markdown id="content" markdown={blogPost.content}></Markdown>
+                ) : (
+                    <p>Loading content...</p>
+                )}
+            </div>
         </div>
     );
-
 }

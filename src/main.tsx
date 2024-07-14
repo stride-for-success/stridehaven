@@ -12,6 +12,7 @@ import './style/index.css'
 import facebook from './assets/logos/facebook.svg';
 import instagram from './assets/logos/insta.svg';
 import twitter from './assets/logos/twitter.svg';
+import github from './assets/logos/github.svg';
 
 
 let headerLinks = <nav id="headerLinks">
@@ -93,6 +94,7 @@ const App = () => (
                     <a href="https://www.facebook.com/" target="_blank"><img src={facebook} alt="facebook"/></a>
                     <a href="https://www.instagram.com/" target="_blank"><img src={instagram} alt="instagram"/></a>
                     <a href="https://www.twitter.com/" target="_blank"><img src={twitter} alt="twitter"/></a>
+                    <a href="https://www.github.com/stride-for-success" target="_blank"><img src={github} alt="twitter"/></a>
                 </div>
                 <div id="newsletter">
                     <input type="email" id="newsletterEmail" placeholder="Email"/>
@@ -128,19 +130,19 @@ render(<App/>, document.getElementById('app')!);
 
 //onload
 window.addEventListener('load', () => {
-    console.log('overflow')
-
-    if (checkOverflow()) {
-        const footer = document.getElementById('footer') as HTMLElement;
-        footer.style.position = 'absolute';
-        footer.style.bottom = '0';
-    }
+    fixFooter();
 });
+
 
 window.addEventListener('hashchange', fixFooter);
 window.addEventListener('load', fixFooter);
 window.addEventListener('resize', fixFooter);
+const resizeObserver = new ResizeObserver(() => {
+    fixFooter();
+});
 
+// start observing a DOM node
+resizeObserver.observe(document.body)
 
 async function subscribeToNewsletter() {
     const email = (document.getElementById('newsletterEmail') as HTMLInputElement).value;
@@ -150,13 +152,18 @@ async function subscribeToNewsletter() {
     (document.getElementById('newsletterEmail') as HTMLInputElement).value = '';
 }
 
-function fixFooter() {
-    console.log('overflow')
 
+
+function fixFooter() {
+    console.log('run')
     if (checkOverflow()) {
         const footer = document.getElementById('footer') as HTMLElement;
         footer.style.position = 'absolute';
         footer.style.bottom = '0';
+    } else {
+        const footer = document.getElementById('footer') as HTMLElement;
+        footer.style.position = 'relative';
+        footer.style.bottom = 'auto';
     }
 }
 
@@ -166,7 +173,6 @@ function checkOverflow()
 
     const elHeight = el.scrollHeight;
     const viewportHeight = window.innerHeight;
-    console.log(elHeight, viewportHeight)
 
     return elHeight <= viewportHeight;
 }
