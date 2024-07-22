@@ -38,7 +38,7 @@
 }
 
 .person img {
-    width: 350px;
+    max-height: 230px;
     border-radius: 15px;
     max-width: 90%;
 }
