@@ -1,0 +1,31 @@
+#donate {
+    text-align:  center;
+    margin-top: 100px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#donate h1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#donateButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f03847;
+    color: #eaf4f7;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    outline-style: solid;
+    outline-width: 2px;
+}
+
+#donateButton:hover {
+    background: #b61c28;
+    color: #eaf4f7;
+}

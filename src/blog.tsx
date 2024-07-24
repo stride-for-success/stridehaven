@@ -11,6 +11,28 @@ interface BlogDetails {
     author?: string;
 }
 
+async function fetchBlogDetails(url: string): Promise<BlogDetails> {
+    const response = await fetch(url);
+    const data = await response.json();
+    const blogDetails: BlogDetails = {};
+
+    for (const file of data) {
+        if (file.name === 'index.md') {
+            const stuffResponse = await fetch(file.download_url);
+            blogDetails['content'] = (await stuffResponse.text()).replace("./assets", "https://raw.githubusercontent.com/stride-for-success/runfluence/main/blog/our-mission/assets");
+        } else if (file.name === 'info.json') {
+            const infoResponse = await fetch(file.download_url);
+            const infoData = await infoResponse.json();
+            blogDetails['title'] = infoData.title;
+            blogDetails['date'] = infoData['creation-date'];
+            blogDetails['description'] = infoData.description;
+            blogDetails['author'] = infoData.author;
+        }
+    }
+
+    return blogDetails;
+}
+
 export function Blog() {
     const [blogPosts, setBlogPosts] = useState<BlogDetails[]>([]);
 
@@ -21,27 +43,8 @@ export function Blog() {
             const posts: BlogDetails[] = [];
 
             for (const folder of data) {
-                let blogDetails: BlogDetails = {};
-
-                blogDetails['urlName'] = folder.name;
-                const url = folder.url;
-
-                const folderResponse = await fetch(url);
-                const folderData = await folderResponse.json();
-
-                for (const file of folderData) {
-                    if (file.name === 'index.md') {
-                        const stuffResponse = await fetch(file.download_url);
-                        blogDetails['content'] = await stuffResponse.text();
-                    } else if (file.name == 'info.json') {
-                        const infoResponse = await fetch(file.download_url);
-                        const infoData = await infoResponse.json();
-                        blogDetails['title'] = infoData.title;
-                        blogDetails['date'] = infoData['creation-date'];
-                        blogDetails['description'] = infoData.description;
-                        blogDetails['author'] = infoData.author;
-                    }
-                }
+                const blogDetails = await fetchBlogDetails(folder.url);
+                blogDetails.urlName = folder.name;
                 posts.push(blogDetails);
             }
 
@@ -69,22 +72,22 @@ export function Blog() {
             </div>
             <div id="blogPosts">
                 {blogPosts ? (
-                    <>{blogPosts.map((post, index) => (
-                        <div className="blogPost" key={index} onClick={() => handleClick(post.urlName)}>
-                            <h2>{post.title}</h2>
-                            <h4>{post.description}</h4>
-                            <p>{post.author} - {post.date ? new Date(post.date).toLocaleDateString() : 'Date not available'}</p>
-                        </div>
-                    ))}</>
+                    <>
+                        {blogPosts.map((post, index) => (
+                            <div className="blogPost" key={index} onClick={() => handleClick(post.urlName)}>
+                                <h2>{post.title}</h2>
+                                <h4>{post.description}</h4>
+                                <p>{post.author} - {post.date ? new Date(post.date).toLocaleDateString() : 'Date not available'}</p>
+                            </div>
+                        ))}
+                    </>
                 ) : (
                     <p>Loading content...</p>
                 )}
-
             </div>
         </div>
     );
 }
-
 
 export function BlogPost() {
     const page = window.location.pathname.split('/').pop();
@@ -92,23 +95,7 @@ export function BlogPost() {
 
     useEffect(() => {
         async function fetchBlogPost() {
-            const response = await fetch(`https://api.github.com/repos/stride-for-success/runfluence/contents/blog/${page}`);
-            const data = await response.json();
-            const blogDetails: BlogDetails = {};
-
-            for (const file of data) {
-                if (file.name === 'index.md') {
-                    const stuffResponse = await fetch(file.download_url);
-                    blogDetails['content'] = await stuffResponse.text();
-                } else if (file.name == 'info.json') {
-                    const infoResponse = await fetch(file.download_url);
-                    const infoData = await infoResponse.json();
-                    blogDetails['title'] = infoData.title;
-                    blogDetails['date'] = infoData['creation-date'];
-                    blogDetails['description'] = infoData.description;
-                    blogDetails['author'] = infoData.author;
-                }
-            }
+            const blogDetails = await fetchBlogDetails(`https://api.github.com/repos/stride-for-success/runfluence/contents/blog/${page}`);
             setBlogPost(blogDetails);
         }
 
@@ -120,7 +107,7 @@ export function BlogPost() {
             <h1>{blogPost.title}</h1>
             <h3>{blogPost.description}</h3>
             <p id="authorAndDate"><b>{blogPost.author} - {blogPost.date ? new Date(blogPost.date).toLocaleDateString() : 'Date not available'}</b></p>
-            <hr/>
+            <hr />
             <div id="blogPostContent">
                 {blogPost.content ? (
                     // @ts-ignore

@@ -13,12 +13,13 @@ import facebook from './assets/logos/facebook.svg';
 import instagram from './assets/logos/insta.svg';
 import twitter from './assets/logos/twitter.svg';
 import github from './assets/logos/github.svg';
+import {Donate} from "./donate";
 
 
 let headerLinks = <nav id="headerLinks">
     <a href="/">HOME</a>
     <a href="/running-grants">RUNNING GRANTS</a>
-    <a href="/donations">DONATIONS</a>
+    <a href="/donate">DONATIONS</a>
     <a href="/sponsorships">SPONSORSHIPS</a>
     <a href="/our-team">OUR TEAM</a>
     <a href="/contact">CONTACT</a>
@@ -29,7 +30,7 @@ if (window.innerWidth < 880) {
         <option value="">-MENU-</option>
         <option value="/">HOME</option>
         <option value="/running-grants">RUNNING GRANTS</option>
-        <option value="/donations">DONATIONS</option>
+        <option value="/donate">DONATIONS</option>
         <option value="/sponsorships">SPONSORSHIPS</option>
         <option value="/our-team">OUR TEAM</option>
         <option value="/contact">CONTACT</option>
@@ -41,7 +42,7 @@ window.addEventListener('resize', () => {
         headerLinks = <select id="headerLinks" onChange={pageSwap}>
             <option value="/">HOME</option>
             <option value="/running-grants">RUNNING GRANTS</option>
-            <option value="/donations">DONATIONS</option>
+            <option value="/donate">DONATIONS</option>
             <option value="/sponsorships">SPONSORSHIPS</option>
             <option value="/our-team">OUR TEAM</option>
             <option value="/contact">CONTACT</option>
@@ -51,7 +52,7 @@ window.addEventListener('resize', () => {
         headerLinks = <nav id="headerLinks">
             <a href="/">HOME</a>
             <a href="/running-grants">RUNNING GRANTS</a>
-            <a href="/donations">DONATIONS</a>
+            <a href="/donate">DONATIONS</a>
             <a href="/sponsorships">SPONSORSHIPS</a>
             <a href="/our-team">OUR TEAM</a>
             <a href="/contact">CONTACT</a>
@@ -83,6 +84,7 @@ const App = () => (
                     <Route path="/about" element={<About />} />
                     <Route path="/blog" element={<Blog />} />
                     <Route path="/blog/*" element={<BlogPost />} />
+                    <Route path="/donate" element={<Donate />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
             </Router>
