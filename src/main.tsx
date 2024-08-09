@@ -17,45 +17,46 @@ import {Donate} from "./donate";
 
 
 let headerLinks = <nav id="headerLinks">
-    <a href="/">HOME</a>
-    <a href="/running-grants">RUNNING GRANTS</a>
-    <a href="/donate">DONATIONS</a>
-    <a href="/sponsorships">SPONSORSHIPS</a>
-    <a href="/our-team">OUR TEAM</a>
-    <a href="/contact">CONTACT</a>
+    <a href="/" aria-label="home link">HOME</a>
+    <a href="/running-grants" aria-label="running grants link">RUNNING GRANTS</a>
+    <a href="/donate" aria-label="donations link">DONATIONS</a>
+    <a href="/sponsorships" aria-label="sponsorships link">SPONSORSHIPS</a>
+    <a href="/our-team" aria-label="our team link">OUR TEAM</a>
+    <a href="/contact" aria-label="contact link">CONTACT</a>
 </nav>
 
 if (window.innerWidth < 880) {
     headerLinks = <select id="headerLinks" onChange={pageSwap}>
-        <option value="">-MENU-</option>
-        <option value="/">HOME</option>
-        <option value="/running-grants">RUNNING GRANTS</option>
-        <option value="/donate">DONATIONS</option>
-        <option value="/sponsorships">SPONSORSHIPS</option>
-        <option value="/our-team">OUR TEAM</option>
-        <option value="/contact">CONTACT</option>
+        <option value="" aria-label="menu">-MENU-</option>
+        <option value="/" aria-label="home link">HOME</option>
+        <option value="/running-grants" aria-label="running grants link">RUNNING GRANTS</option>
+        <option value="/donate" aria-label="donations link">DONATIONS</option>
+        <option value="/sponsorships" aria-label="sponsorships link">SPONSORSHIPS</option>
+        <option value="/our-team" aria-label="our team link">OUR TEAM</option>
+        <option value="/contact" aria-label="contact link">CONTACT</option>
     </select>
 }
 
 window.addEventListener('resize', () => {
     if (window.innerWidth < 880) {
         headerLinks = <select id="headerLinks" onChange={pageSwap}>
-            <option value="/">HOME</option>
-            <option value="/running-grants">RUNNING GRANTS</option>
-            <option value="/donate">DONATIONS</option>
-            <option value="/sponsorships">SPONSORSHIPS</option>
-            <option value="/our-team">OUR TEAM</option>
-            <option value="/contact">CONTACT</option>
+            <option value="" aria-label="menu">-MENU-</option>
+            <option value="/" aria-label="home link">HOME</option>
+            <option value="/running-grants" aria-label="running grants link">RUNNING GRANTS</option>
+            <option value="/donate" aria-label="donations link">DONATIONS</option>
+            <option value="/sponsorships" aria-label="sponsorships link">SPONSORSHIPS</option>
+            <option value="/our-team" aria-label="our team link">OUR TEAM</option>
+            <option value="/contact" aria-label="contact link">CONTACT</option>
         </select>
 
     } else {
         headerLinks = <nav id="headerLinks">
-            <a href="/">HOME</a>
-            <a href="/running-grants">RUNNING GRANTS</a>
-            <a href="/donate">DONATIONS</a>
-            <a href="/sponsorships">SPONSORSHIPS</a>
-            <a href="/our-team">OUR TEAM</a>
-            <a href="/contact">CONTACT</a>
+            <a href="/" aria-label="home link">HOME</a>
+            <a href="/running-grants" aria-label="running grants link">RUNNING GRANTS</a>
+            <a href="/donate" aria-label="donations link">DONATIONS</a>
+            <a href="/sponsorships" aria-label="sponsorships link">SPONSORSHIPS</a>
+            <a href="/our-team" aria-label="our team link">OUR TEAM</a>
+            <a href="/contact" aria-label="contact link">CONTACT</a>
         </nav>
     }
 
@@ -93,35 +94,36 @@ const App = () => (
             <div id="footerTop">
                 <h4 id="copyright">Copyright © Stride For Success Foundation</h4>
                 <div id="socialMedia">
-                    <a href="https://www.facebook.com/" target="_blank"><img src={facebook} alt="facebook"/></a>
-                    <a href="https://www.instagram.com/" target="_blank"><img src={instagram} alt="instagram"/></a>
-                    <a href="https://www.twitter.com/" target="_blank"><img src={twitter} alt="twitter"/></a>
-                    <a href="https://www.github.com/stride-for-success" target="_blank"><img src={github} alt="twitter"/></a>
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="facebook link (opens in a new tab)"><img src={facebook} alt="facebook"/></a>
+                    <a href="https://www.instagram.com/" target="_blank" aria-label="instagram link (opens in a new tab)"><img src={instagram} alt="instagram"/></a>
+                    <a href="https://www.twitter.com/" target="_blank" aria-label="twitter link (opens in a new tab)"><img src={twitter} alt="twitter"/></a>
+                    <a href="https://www.github.com/stride-for-success" target="_blank" aria-label="github link (opens in a new tab)"><img src={github} alt="github"/></a>
                 </div>
                 <div id="newsletter">
+                    <label style="display:none" htmlFor="newsletterEmail">Subscribe to our newsletter</label>
                     <input type="email" id="newsletterEmail" placeholder="Email"/>
                     <button id="subscribe" onClick={subscribeToNewsletter}>Subscribe</button>
                 </div>
             </div>
             <div id="footerBottom">
                 <div id="infoLinks">
-                    <a href="/privacy.html">Privacy Policy</a><br/>
-                    <a href="/terms.html">Terms of Service</a><br/>
-                    <a href="/contact">Contact Us</a>
+                    <a href="/privacy.html" aria-label="privacy policy link">Privacy Policy</a><br/>
+                    <a href="/terms.html" aria-label="terms of service link">Terms of Service</a><br/>
+                    <a href="/contact" aria-label="contact us link">Contact Us</a>
                 </div>
                 <div id="moreLinks">
-                    <a href="/about">About Us</a><br/>
-                    <a href="/blog/faq">FAQ</a><br/>
-                    <a href="/blog">Blog</a>
+                    <a href="/about" aria-label="about us link">About Us</a><br/>
+                    <a href="/blog/faq" aria-label="frequently asked questions link">FAQ</a><br/>
+                    <a href="/blog" aria-label="blog link">Blog</a>
                 </div>
                 <div id="evenMoreLinks">
-                    <a href="/blog/transparency">Our Transparency</a><br/>
-                    <a href="/blog/our-mission">Our Mission</a><br/>
-                    <a href="/sponsorships">Sponsor Us</a>
+                    <a href="/blog/transparency" aria-label="our transparency link">Our Transparency</a><br/>
+                    <a href="/blog/our-mission" aria-label="our mission link">Our Mission</a><br/>
+                    <a href="/sponsorships" aria-label="sponsorships link">Sponsor Us</a>
                 </div>
             </div>
             <div id="footerPhoneBottom">
-                <h4 id="copyright">Copyright © Stride For Success Foundation</h4>
+                <h4 id="copyrightPhone">Copyright © Stride For Success Foundation</h4>
             </div>
         </div>
     </>
@@ -157,7 +159,6 @@ async function subscribeToNewsletter() {
 
 
 function fixFooter() {
-    console.log('run')
     if (checkOverflow()) {
         const footer = document.getElementById('footer') as HTMLElement;
         footer.style.position = 'absolute';

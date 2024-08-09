@@ -8,7 +8,7 @@ import donation from './assets/donation.svg'
 export function Home() {
     const marqueeElements = Array.from({length: 10}, (_, i) =>
         <div className="marqueeInside" key={i}>
-            <a href="" target="_blank"> <img src={random} alt="track stuff"/> </a>
+            <a href="" target="_blank" aria-label="(opens in a new tab)"> <img src={random} alt="track stuff"/> </a>
         </div>);
 
     return (
@@ -20,16 +20,16 @@ export function Home() {
                     <h3 className="fancy italic">A nonprofit for</h3>
                     <h1>Empowering low-income runners to pursue their passion</h1>
                     <h3 id="subtitle" className="fancy">Through grants and essential support</h3>
-                    {/*<a href="https://en.wikipedia.org/wiki/World_domination" target="_blank" className="miniClickHere">OUR*/}
-                    {/*    MISSION</a>*/}
+                    <a href="/blog/our-mission" target="_blank" aria-label="our mission link (opens in a new tab)" className="miniClickHere">OUR
+                        MISSION</a>
                 </div>
-                <img id="moneyImage" src={moneyLogo} alt=""/>
+                <img id="moneyImage" src={moneyLogo} alt="Image of money"/>
             </div>
             <br/>
             <hr/>
             <div id="sponsors">
                 <h2 id="sponsorsText">Sponsors</h2>
-                <h3 className="fancy italic"> We have no sponsors as of now. <a href="/sponsorships">Maybe you could be our first?</a></h3>
+                <h3 className="fancy italic"> We have no sponsors as of now. <a href="/sponsorships" aria-label="sponsorships link">Maybe you could be our first?</a></h3>
                 <div className="marquee">
                     {marqueeElements}
                 </div>
@@ -37,9 +37,9 @@ export function Home() {
             <hr/>
             <br/>
             <div className="divImage">
-                <img id="trackStuff" src={trackStuff} alt=""/>
+                <img id="trackStuff" src={trackStuff} alt="An image of track stuff"/>
                 <div id="about">
-                    <h1>Why</h1>
+                    <h2>Why</h2>
                     <h3 className="fancy italic">50% of U.S. track athletes who rank in the Top 10 in their event made less than $15,000 annually from their sport as of 2014.</h3>
                     <p id="aboutParagraph">
                         Runners deserve to be able to pursue their passion without worrying about financial constraints. We provide grants to low-income runners to help them achieve their dreams.
@@ -50,13 +50,13 @@ export function Home() {
             <br/>
             <div className="divImage">
                 <div id="support">
-                    <h1>Support Us</h1>
+                    <h2>Support Us</h2>
                     <p id="donationParagraph">
                         Stride For Success Foundation is a 501(c)(3) nonprofit organization. Your donation is tax-deductible. We are a 100% volunteer-run, so your donation goes directly to supporting our mission.
                     </p>
 
-                    <a href="/donate" className="miniClickHere">DONATE</a></div>
-                <img id="donation" src={donation} alt=""/>
+                    <a href="/donate" className="miniClickHere" aria-label="donations link">DONATE</a></div>
+                <img id="donation" src={donation} alt="Donation Image. Shows a hand reaching out with a heart"/>
             </div>
 
         </>

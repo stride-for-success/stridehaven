@@ -188,6 +188,15 @@ h3 {
     vertical-align: center;
 }
 
+#copyright, #copyrightPhone {
+    font-size: 14px;
+    margin-top: 25px;
+    color: #f03847;
+    margin-left: 50px;
+    height: 30px;
+    vertical-align: center;
+}
+
 #newsletter {
     font-size: 14px;
     margin-top: 23px;
