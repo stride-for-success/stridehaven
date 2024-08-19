@@ -22,7 +22,7 @@ export function Team() {
                 <div className="person">
                     <img src={ jackson } alt="Jackson Hickey"/>
                     <h2>Jackson Hickey</h2>
-                    <p className="title">Founder & CEO & Lead Software Developer</p>
+                    <p className="title">Co-founder & CEO & Lead Software Developer</p>
                     <p>Cross Country, Indoor & Outdoor track runner. Develops software on the side and plays oboe.</p>
                     <p>
                         <a href="https://jacksonhickey.tech#contact" target="_blank">
