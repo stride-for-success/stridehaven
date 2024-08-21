@@ -30,9 +30,9 @@ To get the project up and running, follow these steps:
 
 ## To Do
 
-- [ ] Blog
+- [x] Blog
 - [x] Phone Compatibility
-- [ ] Donation Page
+- [x] Donation Page
 
 ## About Stride for Success Foundation
 
@@ -53,8 +53,8 @@ We welcome contributions to Stridehaven! If you're interested in helping out, pl
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL-v3 License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-For more information about the Stride for Success Foundation, [visit our website](https://strideforsuccess.org/contact)
+For more information about the Stride for Success Foundation, [visit our website](https://strideforsuccess.org/)
