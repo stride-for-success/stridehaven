@@ -19,7 +19,7 @@ export function Team() {
             <br/>
             <br/>
             <div id="team">
-                <div className="person">
+{/*                 <div className="person">
                     <img src={ jackson } alt="Jackson Hickey"/>
                     <h2>Jackson Hickey</h2>
                     <p className="title">Co-founder & CEO & Lead Software Developer</p>
@@ -51,7 +51,7 @@ export function Team() {
                             <button>Contact</button>
                         </a>
                     </p>
-                </div>
+                </div> */}
             </div>
             <br/>
 
